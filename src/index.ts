@@ -1,5 +1,21 @@
-export function main() {
-    console.log("Hello from broadcast-bot")
-}
-
-main()
+export { BroadcastBot } from "./broadcast-bot.js"
+export type { BroadcastBotEvents, BroadcastBotOptions } from "./broadcast-bot.js"
+export { configSchema, exampleConfig, loadConfig, parseConfig } from "./config.js"
+export type { BroadcastBotConfig } from "./config.js"
+export { createBotFromConfig, createStrategies } from "./create-bot.js"
+export { matchesFilters } from "./filters.js"
+export { discordBrandColor, formatDiscordEmbed, formatTelegramMessage, formatWhatsappMessage } from "./formatters.js"
+export { consoleLogger, silentLogger } from "./logger.js"
+export { broadcastEvents, SocketOfferSource } from "./offer-source.js"
+export type { OfferSource, OfferSourceHandlers, SocketOfferSourceOptions } from "./offer-source.js"
+export { SendQueue } from "./queue.js"
+export { DiscordStrategy } from "./strategies/discord.strategy.js"
+export type { DiscordStrategyOptions } from "./strategies/discord.strategy.js"
+export { TargetUnavailableError } from "./strategies/strategy.js"
+export type { BroadcastStrategy } from "./strategies/strategy.js"
+export { TelegramStrategy } from "./strategies/telegram.strategy.js"
+export type { TelegramStrategyOptions } from "./strategies/telegram.strategy.js"
+export { WhatsappStrategy } from "./strategies/whatsapp.strategy.js"
+export type { WhatsappGroup, WhatsappStrategyOptions } from "./strategies/whatsapp.strategy.js"
+export { platforms, strategyNames } from "./types.js"
+export type { BroadcastOffer, Destination, DestinationFilters, Logger, Platform, StrategyName } from "./types.js"

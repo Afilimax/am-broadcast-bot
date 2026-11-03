@@ -143,3 +143,6 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+# Configuração e sessão locais do bot (contêm segredos)
+broadcast-bot.config.json
+whatsapp-auth/

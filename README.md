@@ -171,7 +171,7 @@ Para integrar sem este pacote, conecte com o [Socket.IO](https://socket.io/) no 
 | Evento | Payload |
 |---|---|
 | `broadcast.ready` | `{ userName }` |
-| `broadcast.offer` | Oferta com `title`, `price`, `oldPrice`, `discountPercentage`, `coupons`, `affiliateUrl`, `platform`, `platformLabel` e `message` (texto pronto para enviar) |
+| `broadcast.offer` | Oferta com `title`, `price`, `oldPrice`, `discountPercentage`, `coupons`, `affiliateUrl`, `trackingUrl` (link curto que conta os cliques nas métricas), `platform`, `platformLabel` e `message` (texto pronto para enviar) |
 | `broadcast.error` | `{ message }`. A conexão é encerrada em seguida |
 
 ## Desenvolvimento

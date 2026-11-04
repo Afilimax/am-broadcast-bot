@@ -16,6 +16,7 @@ export interface BroadcastOffer {
     discountPercentage: number | null
     coupons: string[]
     affiliateUrl: string
+    trackingUrl?: string
     originalUrl: string
     sourceChannelName: string
     createdAt: string

@@ -23,3 +23,7 @@ export function truncate(value: string, maxLength: number) {
 export function hasDiscount(offer: { oldPrice: number | null; discountPercentage: number | null }) {
     return offer.oldPrice !== null && offer.discountPercentage !== null
 }
+
+export function getOfferUrl(offer: { affiliateUrl: string; trackingUrl?: string }) {
+    return offer.trackingUrl ?? offer.affiliateUrl
+}

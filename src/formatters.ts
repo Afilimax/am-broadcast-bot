@@ -1,5 +1,5 @@
 import type { BroadcastOffer } from "./types.js"
-import { escapeHtml, formatCurrency, hasDiscount, truncate } from "./utils/format.js"
+import { escapeHtml, formatCurrency, getOfferUrl, hasDiscount, truncate } from "./utils/format.js"
 
 export function formatTelegramMessage(offer: BroadcastOffer) {
     const priceLine = hasDiscount(offer)
@@ -15,7 +15,7 @@ export function formatTelegramMessage(offer: BroadcastOffer) {
         "",
         priceLine,
         couponLine,
-        `🛒 <a href="${escapeHtml(offer.affiliateUrl)}">Comprar na ${escapeHtml(offer.platformLabel)}</a>`,
+        `🛒 <a href="${escapeHtml(getOfferUrl(offer))}">Comprar na ${escapeHtml(offer.platformLabel)}</a>`,
     ]
         .filter((currentLine) => currentLine !== null)
         .join("\n")
@@ -30,7 +30,7 @@ export function formatWhatsappMessage(offer: BroadcastOffer) {
             ? `🎟️ Cupom: ${offer.coupons.map((currentCoupon) => `\`${currentCoupon}\``).join(", ")}`
             : null
 
-    return [`🔥 *${offer.title}*`, "", priceLine, couponLine, `🛒 ${offer.platformLabel}: ${offer.affiliateUrl}`]
+    return [`🔥 *${offer.title}*`, "", priceLine, couponLine, `🛒 ${offer.platformLabel}: ${getOfferUrl(offer)}`]
         .filter((currentLine) => currentLine !== null)
         .join("\n")
 }
@@ -64,8 +64,8 @@ export function formatDiscordEmbed(offer: BroadcastOffer): DiscordEmbedData {
 
     return {
         title: truncate(`🔥 ${offer.title}`, 256),
-        url: offer.affiliateUrl,
-        description: `${description}\n\n[🛒 Comprar na ${offer.platformLabel}](${offer.affiliateUrl})`,
+        url: getOfferUrl(offer),
+        description: `${description}\n\n[🛒 Comprar na ${offer.platformLabel}](${getOfferUrl(offer)})`,
         color: discordBrandColor,
         fields: fields,
         footer: { text: offer.platformLabel },

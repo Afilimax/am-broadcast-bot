@@ -67,6 +67,15 @@ describe("formatadores", () => {
         expect(embed.title.length).toBeLessThanOrEqual(256)
     })
 
+    test("usa o link rastreável da Afilimax quando ele vem na oferta", () => {
+        const offer = createOffer({ trackingUrl: "https://afilimax.net/r/abc1234" })
+
+        expect(formatTelegramMessage(offer)).toContain('<a href="https://afilimax.net/r/abc1234">')
+        expect(formatWhatsappMessage(offer)).toContain("Shopee: https://afilimax.net/r/abc1234")
+        expect(formatDiscordEmbed(offer).url).toBe("https://afilimax.net/r/abc1234")
+        expect(formatTelegramMessage(offer)).not.toContain("s.shopee.com.br")
+    })
+
     test("Discord corta títulos longos", () => {
         expect(formatDiscordEmbed(createOffer({ title: "x".repeat(400) })).title.length).toBe(256)
     })

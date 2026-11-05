@@ -69,7 +69,7 @@ Use `--config caminho/arquivo.json` (ou `-c`) para indicar outro arquivo.
 
 ```json
 {
-    "serverUrl": "http://localhost:3003",
+    "serverUrl": "https://ws.afilimax.net",
     "token": "amb_seu_token_de_divulgacao",
     "strategies": {
         "telegram": { "botToken": "token do @BotFather" },
@@ -86,7 +86,7 @@ Use `--config caminho/arquivo.json` (ou `-c`) para indicar outro arquivo.
 
 | Campo | Descrição |
 |---|---|
-| `serverUrl` | URL do backend da Afilimax |
+| `serverUrl` | URL do WebSocket da Afilimax (`https://ws.afilimax.net`; o painel mostra o valor certo) |
 | `token` | Token de divulgação (`amb_…`) |
 | `maxQueuedPerDestination` | Máximo de ofertas na fila de cada destino antes de descartar. Padrão: `50` |
 | `strategies.telegram.botToken` | Token do bot do Telegram |
@@ -148,7 +148,7 @@ Para não deixar segredos no arquivo, você pode passar estes valores por variá
 import { BroadcastBot, TelegramStrategy } from "@afilimax/broadcast-bot"
 
 const bot = new BroadcastBot({
-    serverUrl: "http://localhost:3003",
+    serverUrl: "https://ws.afilimax.net",
     token: process.env.AFILIMAX_BROADCAST_TOKEN!,
     strategies: [new TelegramStrategy({ botToken: process.env.TELEGRAM_BOT_TOKEN! })],
     destinations: [

@@ -95,7 +95,7 @@ export async function loadConfig(path: string, environment: Environment = proces
 }
 
 export const exampleConfig = {
-    serverUrl: "http://localhost:3003",
+    serverUrl: "https://ws.afilimax.net",
     token: "amb_seu_token_de_divulgacao",
     strategies: {
         telegram: { botToken: "token do @BotFather" },

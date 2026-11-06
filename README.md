@@ -26,7 +26,7 @@ Os links só existem enquanto o app desktop estiver aberto e conectado. O bot di
 
 ### Como gerar o token de divulgação
 
-O token é separado da chave de API do app desktop e só permite **ler** as suas ofertas. Gere ou troque o token pela API da Afilimax, autenticado com a sua sessão:
+O token é separado dos tokens do Link Builder e só permite **ler** as suas ofertas. Gere ou troque o token pela API da Afilimax, autenticado com a sua sessão:
 
 ```http
 POST /broadcast/token/rotate

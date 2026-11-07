@@ -1,8 +1,8 @@
 import { Telegraf, TelegramError } from "telegraf"
 
 import { formatTelegramMessage } from "../formatters.js"
-import { getOfferUrl } from "../utils/format.js"
 import type { BroadcastOffer } from "../types.js"
+import { getOfferUrl } from "../utils/format.js"
 import { TargetUnavailableError, type BroadcastStrategy } from "./strategy.js"
 
 export interface TelegramStrategyOptions {

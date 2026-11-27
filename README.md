@@ -1,3 +1,10 @@
+<a href="https://afilimax.net"><img src="https://raw.githubusercontent.com/Afilimax/.github/main/assets/npm-banner.svg" alt="Afilimax — Encontre a oferta. Gere o link. Divulgue sozinho." width="100%" /></a>
+
+[![npm version](https://img.shields.io/npm/v/%40afilimax%2Fbroadcast-bot?logo=npm)](https://www.npmjs.com/package/@afilimax/broadcast-bot)
+[![npm downloads](https://img.shields.io/npm/dm/%40afilimax%2Fbroadcast-bot?logo=npm)](https://www.npmjs.com/package/@afilimax/broadcast-bot)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Afilimax/am-broadcast-bot/blob/HEAD/LICENSE)
+[![Website](https://img.shields.io/badge/website-afilimax.net-7857FF)](https://afilimax.net)
+
 # @afilimax/broadcast-bot
 
 Bot de divulgação open source da [Afilimax](https://afilimax.net). Ele se conecta ao WebSocket da Afilimax, recebe em tempo real as ofertas já convertidas em **links de afiliado seus** e publica cada uma nos seus canais e grupos do **Telegram**, **WhatsApp** e **Discord**.
@@ -187,3 +194,10 @@ npm run build
 ## Licença
 
 [MIT](./LICENSE)
+---
+
+## Automatize sua operação de afiliados
+
+> Use este pacote para automatizar sua operação de afiliados. Conheça a plataforma Afilimax e transforme ofertas em links e divulgação automática.
+
+[Conheça a Afilimax](https://afilimax.net) · [Pacote no npm](https://www.npmjs.com/package/@afilimax/broadcast-bot) · [Repositório no GitHub](https://github.com/Afilimax/am-broadcast-bot)

@@ -194,6 +194,7 @@ npm run build
 ## Licença
 
 [MIT](./LICENSE)
+
 ---
 
 ## Automatize sua operação de afiliados
